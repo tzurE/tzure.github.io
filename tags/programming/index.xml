@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming on Tzur Eliya</title>
+    <link>https://tzure.github.io/tags/programming/</link>
+    <description>Recent content in programming on Tzur Eliya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 Tzur Eliya</copyright>
+    <lastBuildDate>Fri, 14 Jul 2023 16:56:49 +0200</lastBuildDate><atom:link href="https://tzure.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I got tickets to a quickly sold out Brandon Sanderson lecture with 40 lines of Python code</title>
+      <link>https://tzure.github.io/posts/tickets_post/</link>
+      <pubDate>Fri, 14 Jul 2023 16:56:49 +0200</pubDate>
+      
+      <guid>https://tzure.github.io/posts/tickets_post/</guid>
+      <description>This was originally published on Medium</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://tzure.github.io/posts/tickets_post/featured.png" />
+    </item>
+    
+  </channel>
+</rss>
