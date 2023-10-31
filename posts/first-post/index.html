@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Building an AI that plays games &middot; Tzur Eliya</title>
-  <meta name="title" content="Building an AI that plays games &middot; Tzur Eliya" />
+  <title>Building An AI That Can Play Games - Part I &middot; Tzur Eliya</title>
+  <meta name="title" content="Building An AI That Can Play Games - Part I &middot; Tzur Eliya" />
   
   
   
@@ -26,8 +26,10 @@
   
   
   
-  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.9eb648c68daf808d8cd55167be9b745e0bbf782f58af8f8e33e2a0fd5dcfcba2092775962db85411e66c8d4c3f8d243ebee58026ebfeea3ee9e5c53616d44f18.css"
-    integrity="sha512-nrZIxo2vgI2M1VFnvpt0Xgu/eC9Yr4&#43;OM&#43;Kg/V3Py6IJJ3WWLbhUEeZsjUw/jSQ&#43;vuWAJuv&#43;6j7p5cU2FtRPGA==" />
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.bb7aefcc4e63aa60c2c5872b60e619713f1b71ceb2cf8963c6b6abe84850da562e473af3354735f0763048be0e6519ba003b82949a39af77a3348920b1fda138.css"
+    integrity="sha512-u3rvzE5jqmDCxYcrYOYZcT8bcc6yz4ljxrar6EhQ2lYuRzrzNUc18HYwSL4OZRm6ADuClJo5r3ejNIkgsf2hOA==" />
   
   
   <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
@@ -58,7 +60,7 @@
   
   
   
-  <meta property="og:title" content="Building an AI that plays games" />
+  <meta property="og:title" content="Building An AI That Can Play Games - Part I" />
 <meta property="og:description" content="Hi everyone!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tzure.github.io/posts/first-post/" /><meta property="og:image" content="https://tzure.github.io/posts/first-post/featured.PNG"/><meta property="article:section" content="posts" />
@@ -67,7 +69,7 @@
 
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://tzure.github.io/posts/first-post/featured.PNG"/>
-<meta name="twitter:title" content="Building an AI that plays games"/>
+<meta name="twitter:title" content="Building An AI That Can Play Games - Part I"/>
 <meta name="twitter:description" content="Hi everyone!"/>
 
   
@@ -76,8 +78,8 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Building an AI that plays games",
-    "headline": "Building an AI that plays games",
+    "name": "Building An AI That Can Play Games - Part I",
+    "headline": "Building An AI That Can Play Games - Part I",
     
     "abstract": "Hi everyone!",
     "inLanguage": "en",
@@ -95,7 +97,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "29"
+    "wordCount": "871"
   }]
   </script>
 
@@ -145,6 +147,9 @@
 
 
 
+
+
+<script defer src="/lib/tw-elements/index.min.js" integrity=""></script>
 
   
   
@@ -384,7 +389,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      Building an AI that plays games
+      Building An AI That Can Play Games - Part I
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -427,7 +432,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-07-01 15:05:58 &#43;0200 &#43;0200">1 July 2023</time><span class="px-2 text-primary-500">&middot;</span><span>29 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+  <time datetime="2023-07-01 15:05:58 &#43;0200 &#43;0200">1 July 2023</time><span class="px-2 text-primary-500">&middot;</span><span>871 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
   
 
   
@@ -610,7 +615,418 @@
 
 
         <div class="max-w-prose mb-20">
-          <p>Hi everyone! <br>since this is my first blog post, I wanted to write about a cool project that combined two separate areas I love - AI &amp; Game development. <br></p>
+          <p>Hi everyone! <br>As this is my first post in this new blog, I wanted to write about a cool project that combined two separate areas I love - AI &amp; Game development. <br></p>
+<p>So, without further ado -</p>
+<div id="how-did-i-build-an-ai-that-can-play-2d-games" class="anchor"></div>
+<h2 class="relative group">How did I build an AI that can play 2D games? 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#how-did-i-build-an-ai-that-can-play-2d-games" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>I attempt to explore every aspect of development as a software developer, but my passion has always been game development. I created numerous tiny tech demos and multiple mini-games, one of which included a proposal to my wife, but more on that later.</p>
+<p>
+I studied machine learning two years ago and became interested in neural networks after reading an interesting book. I will do my best to provide a brief overview of those, but for anyone who would like to read more, I will provide links.
+</p>
+The primary objective is to develop a 2D, simple Mario-style game in which an AI player can navigate the level from beginning to end.
+<div id="background" class="anchor"></div>
+<h2 class="relative group">Background 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#background" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<div id="what-are-neural-networks" class="anchor"></div>
+<h3 class="relative group">What are Neural Networks? 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#what-are-neural-networks" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<p><small><em><b>if you know the basics of Neural Networks, just skip <a href="#afterNN"  >
+    to the next section</a></em><br></small></b>
+Neural Networks are computing systems vaguely inspired by the biological neural networks that constitute our brains.
+Such systems &ldquo;learn&rdquo; to perform tasks by considering examples, generally without being programmed with task-specific rules.
+For example, in image recognition(Image classifier), they might learn to identify images that contain cats by analyzing example images that have been manually labeled as &ldquo;cat&rdquo; or &ldquo;no cat&rdquo; and using the results to identify cats in other images</p>
+<p>It is a collection of connected units (nodes) called artificial neurons, which loosely model the neurons in a biological brain.
+Each connection, like the synapse in a biological brain, can transmit a “signal” to other neurons.
+An artificial neuron that receives a signal, processes it, and can signal neurons connected to it.</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/posts/first-post/image.png"
+        alt="Alt text"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<p>Each synapse (connection) has a weight, and that weight represents its relative importance.
+Some neurons have a Bias value, which is a constant value we add to signals passing through it.
+The value of each neuron is updated using something called an <b>Activation Function.</b>
+The Activation function receives inputs and weights (the Neuron&rsquo;s data) and passes on a value to the next neuron until it arrives at the last layer (output) and passes the final result.</p>
+<div style="text-align:center">
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/posts/first-post/image-1.png"
+        alt="Node"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+</div>
+<p>If you want more information, I highly recommend checking out <a href="https://youtu.be/aircAruvnKk?si=hgYoZZU51VqMCp6x"   target="_blank">
+    this youtube video</a>, it has a very clear explanation on the complete flow.</p>
+<p><a id="afterNN"></a></p>
+<div id="survival-of-the-fittest" class="anchor"></div>
+<h3 class="relative group">Survival of the fittest 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#survival-of-the-fittest" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<p>a term used to explain the mechanism of Natural Selection that dates back to Darwinian evolutionary theory.
+One important mechanism of evolution is natural selection, which is the process by which organisms with advantageous features have a higher chance of procreating and flourishing.
+In other words, the organisms with the highest Fitness have a higher probability of thriving.</p>
+<p>
+let's consider a population of mice that moved into a new area where the rocks are very dark.
+Due to natural genetic variation, some mice have black fur, while others have tan fur.
+Tan mice are more visible to predatory birds, than black mice.
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/posts/first-post/image-2.png"
+        alt="Alt text"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<p>
+some mice were eaten by birds, this occurs because Tan mice are more visible to predatory birds, thus, tan mice are eaten at a higher rate than black mice. This means only the surviving mice reach reproductive age have offspring.
+<p>
+Because black mice had a higher chance of leaving an offspring than Tan mice, the next generation contains a higher number of black mice than the previous generation.
+<div id="combining-evolution-with-neural-networks" class="anchor"></div>
+<h3 class="relative group">Combining evolution with Neural Networks 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#combining-evolution-with-neural-networks" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<p>There are many methods for training a neural network, but I chose to use evolution and Survival of the Fittest.
+Essentially, until our neural network reaches its maximum potential, we will need to &ldquo;evolve&rdquo; it by creating successive generations and choosing the most fitted of them.</p>
+<div id="the-process---combine-neural-network-with-evolution" class="anchor"></div>
+<h2 class="relative group">The Process - Combine Neural Network with Evolution 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#the-process---combine-neural-network-with-evolution" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<ol class="border-l-2 list-none border-primary-500 dark:border-primary-300">
+
+
+
+
+
+
+<li class="list-none">
+  <div class="flex flex-start">
+    <div class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full -ml-12 mt-5">
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M266.3 48.3L232.5 73.6c-5.4 4-8.5 10.4-8.5 17.1v9.1c0 6.8 5.5 12.3 12.3 12.3c2.4 0 4.8-.7 6.8-2.1l41.8-27.9c2-1.3 4.4-2.1 6.8-2.1h1c6.2 0 11.3 5.1 11.3 11.3c0 3-1.2 5.9-3.3 8l-19.9 19.9c-5.8 5.8-12.9 10.2-20.7 12.8l-26.5 8.8c-5.8 1.9-9.6 7.3-9.6 13.4c0 3.7-1.5 7.3-4.1 10l-17.9 17.9c-6.4 6.4-9.9 15-9.9 24v4.3c0 16.4 13.6 29.7 29.9 29.7c11 0 21.2-6.2 26.1-16l4-8.1c2.4-4.8 7.4-7.9 12.8-7.9c4.5 0 8.7 2.1 11.4 5.7l16.3 21.7c2.1 2.9 5.5 4.5 9.1 4.5c8.4 0 13.9-8.9 10.1-16.4l-1.1-2.3c-3.5-7 0-15.5 7.5-18l21.2-7.1c7.6-2.5 12.7-9.6 12.7-17.6c0-10.3 8.3-18.6 18.6-18.6H400c8.8 0 16 7.2 16 16s-7.2 16-16 16H379.3c-7.2 0-14.2 2.9-19.3 8l-4.7 4.7c-2.1 2.1-3.3 5-3.3 8c0 6.2 5.1 11.3 11.3 11.3h11.3c6 0 11.8 2.4 16 6.6l6.5 6.5c1.8 1.8 2.8 4.3 2.8 6.8s-1 5-2.8 6.8l-7.5 7.5C386 262 384 266.9 384 272s2 10 5.7 13.7L408 304c10.2 10.2 24.1 16 38.6 16H454c6.5-20.2 10-41.7 10-64c0-111.4-87.6-202.4-197.7-207.7zm172 307.9c-3.7-2.6-8.2-4.1-13-4.1c-6 0-11.8-2.4-16-6.6L396 332c-7.7-7.7-18-12-28.9-12c-9.7 0-19.2-3.5-26.6-9.8L314 287.4c-11.6-9.9-26.4-15.4-41.6-15.4H251.4c-12.6 0-25 3.7-35.5 10.7L188.5 301c-17.8 11.9-28.5 31.9-28.5 53.3v3.2c0 17 6.7 33.3 18.7 45.3l16 16c8.5 8.5 20 13.3 32 13.3H248c13.3 0 24 10.7 24 24c0 2.5 .4 5 1.1 7.3c71.3-5.8 132.5-47.6 165.2-107.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM187.3 100.7c-6.2-6.2-16.4-6.2-22.6 0l-32 32c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l32-32c6.2-6.2 6.2-16.4 0-22.6z"/></svg>
+  </span>
+
+
+    </div>
+    <div class="block p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 backdrop-blur">
+      <div class="flex justify-between">
+        
+        <h2 class="mt-0">
+          Step I 
+        </h2>
+        
+        
+      </div>
+      
+      <h4 class="mt-0">
+        Create Neural Networks
+      </h4>
+      
+      <p class="text-gray-700 mb-6">
+create several ANNs with weights and biases, and choose their input at random, letting them compute whatever result.
+
+</p>
+    </div>
+  </div>
+</li>
+
+
+
+
+
+
+<li class="list-none">
+  <div class="flex flex-start">
+    <div class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full -ml-12 mt-5">
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M266.3 48.3L232.5 73.6c-5.4 4-8.5 10.4-8.5 17.1v9.1c0 6.8 5.5 12.3 12.3 12.3c2.4 0 4.8-.7 6.8-2.1l41.8-27.9c2-1.3 4.4-2.1 6.8-2.1h1c6.2 0 11.3 5.1 11.3 11.3c0 3-1.2 5.9-3.3 8l-19.9 19.9c-5.8 5.8-12.9 10.2-20.7 12.8l-26.5 8.8c-5.8 1.9-9.6 7.3-9.6 13.4c0 3.7-1.5 7.3-4.1 10l-17.9 17.9c-6.4 6.4-9.9 15-9.9 24v4.3c0 16.4 13.6 29.7 29.9 29.7c11 0 21.2-6.2 26.1-16l4-8.1c2.4-4.8 7.4-7.9 12.8-7.9c4.5 0 8.7 2.1 11.4 5.7l16.3 21.7c2.1 2.9 5.5 4.5 9.1 4.5c8.4 0 13.9-8.9 10.1-16.4l-1.1-2.3c-3.5-7 0-15.5 7.5-18l21.2-7.1c7.6-2.5 12.7-9.6 12.7-17.6c0-10.3 8.3-18.6 18.6-18.6H400c8.8 0 16 7.2 16 16s-7.2 16-16 16H379.3c-7.2 0-14.2 2.9-19.3 8l-4.7 4.7c-2.1 2.1-3.3 5-3.3 8c0 6.2 5.1 11.3 11.3 11.3h11.3c6 0 11.8 2.4 16 6.6l6.5 6.5c1.8 1.8 2.8 4.3 2.8 6.8s-1 5-2.8 6.8l-7.5 7.5C386 262 384 266.9 384 272s2 10 5.7 13.7L408 304c10.2 10.2 24.1 16 38.6 16H454c6.5-20.2 10-41.7 10-64c0-111.4-87.6-202.4-197.7-207.7zm172 307.9c-3.7-2.6-8.2-4.1-13-4.1c-6 0-11.8-2.4-16-6.6L396 332c-7.7-7.7-18-12-28.9-12c-9.7 0-19.2-3.5-26.6-9.8L314 287.4c-11.6-9.9-26.4-15.4-41.6-15.4H251.4c-12.6 0-25 3.7-35.5 10.7L188.5 301c-17.8 11.9-28.5 31.9-28.5 53.3v3.2c0 17 6.7 33.3 18.7 45.3l16 16c8.5 8.5 20 13.3 32 13.3H248c13.3 0 24 10.7 24 24c0 2.5 .4 5 1.1 7.3c71.3-5.8 132.5-47.6 165.2-107.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM187.3 100.7c-6.2-6.2-16.4-6.2-22.6 0l-32 32c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l32-32c6.2-6.2 6.2-16.4 0-22.6z"/></svg>
+  </span>
+
+
+    </div>
+    <div class="block p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 backdrop-blur">
+      <div class="flex justify-between">
+        
+        <h2 class="mt-0">
+          Step II 
+        </h2>
+        
+        
+      </div>
+      
+      <h4 class="mt-0">
+        Compute and Rank them
+      </h4>
+      
+      <p class="text-gray-700 mb-6">
+Step 2: After they were all done computing their result, rank them, using a fitness function. 
+The fitness dictated who was the “best” ANN out of all of those ANNs.
+
+</p>
+    </div>
+  </div>
+</li>
+
+
+
+
+
+
+<li class="list-none">
+  <div class="flex flex-start">
+    <div class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full -ml-12 mt-5">
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M266.3 48.3L232.5 73.6c-5.4 4-8.5 10.4-8.5 17.1v9.1c0 6.8 5.5 12.3 12.3 12.3c2.4 0 4.8-.7 6.8-2.1l41.8-27.9c2-1.3 4.4-2.1 6.8-2.1h1c6.2 0 11.3 5.1 11.3 11.3c0 3-1.2 5.9-3.3 8l-19.9 19.9c-5.8 5.8-12.9 10.2-20.7 12.8l-26.5 8.8c-5.8 1.9-9.6 7.3-9.6 13.4c0 3.7-1.5 7.3-4.1 10l-17.9 17.9c-6.4 6.4-9.9 15-9.9 24v4.3c0 16.4 13.6 29.7 29.9 29.7c11 0 21.2-6.2 26.1-16l4-8.1c2.4-4.8 7.4-7.9 12.8-7.9c4.5 0 8.7 2.1 11.4 5.7l16.3 21.7c2.1 2.9 5.5 4.5 9.1 4.5c8.4 0 13.9-8.9 10.1-16.4l-1.1-2.3c-3.5-7 0-15.5 7.5-18l21.2-7.1c7.6-2.5 12.7-9.6 12.7-17.6c0-10.3 8.3-18.6 18.6-18.6H400c8.8 0 16 7.2 16 16s-7.2 16-16 16H379.3c-7.2 0-14.2 2.9-19.3 8l-4.7 4.7c-2.1 2.1-3.3 5-3.3 8c0 6.2 5.1 11.3 11.3 11.3h11.3c6 0 11.8 2.4 16 6.6l6.5 6.5c1.8 1.8 2.8 4.3 2.8 6.8s-1 5-2.8 6.8l-7.5 7.5C386 262 384 266.9 384 272s2 10 5.7 13.7L408 304c10.2 10.2 24.1 16 38.6 16H454c6.5-20.2 10-41.7 10-64c0-111.4-87.6-202.4-197.7-207.7zm172 307.9c-3.7-2.6-8.2-4.1-13-4.1c-6 0-11.8-2.4-16-6.6L396 332c-7.7-7.7-18-12-28.9-12c-9.7 0-19.2-3.5-26.6-9.8L314 287.4c-11.6-9.9-26.4-15.4-41.6-15.4H251.4c-12.6 0-25 3.7-35.5 10.7L188.5 301c-17.8 11.9-28.5 31.9-28.5 53.3v3.2c0 17 6.7 33.3 18.7 45.3l16 16c8.5 8.5 20 13.3 32 13.3H248c13.3 0 24 10.7 24 24c0 2.5 .4 5 1.1 7.3c71.3-5.8 132.5-47.6 165.2-107.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM187.3 100.7c-6.2-6.2-16.4-6.2-22.6 0l-32 32c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l32-32c6.2-6.2 6.2-16.4 0-22.6z"/></svg>
+  </span>
+
+
+    </div>
+    <div class="block p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 backdrop-blur">
+      <div class="flex justify-between">
+        
+        <h2 class="mt-0">
+          Step III 
+        </h2>
+        
+        
+      </div>
+      
+      <h4 class="mt-0">
+        Choose Best, Delete and Copy
+      </h4>
+      
+      <p class="text-gray-700 mb-6">
+Choose the one with the best Fitness.
+Delete 50% of the worst Neural Networks (lowest scores), and copy the best in their place (with a <b>twist</b>)
+
+</p>
+    </div>
+  </div>
+</li>
+
+</ol>
+<p>Here&rsquo;s the concept graphically</p>
+<div id="step-1---create-neural-networks" class="anchor"></div>
+<h4 class="relative group">Step 1 - Create Neural Networks 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#step-1---create-neural-networks" aria-label="Anchor">#</a></span>        
+    
+</h4>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/posts/first-post/image-4.png"
+        alt="Alt text"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<div id="step-2---compute-and-rank-them" class="anchor"></div>
+<h4 class="relative group">Step 2 - Compute and Rank them 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#step-2---compute-and-rank-them" aria-label="Anchor">#</a></span>        
+    
+</h4>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/posts/first-post/image-5.png"
+        alt="Alt text"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<div id="step-3---choose-best-delete-and-copy" class="anchor"></div>
+<h4 class="relative group">Step 3 - Choose Best, Delete and Copy 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#step-3---choose-best-delete-and-copy" aria-label="Anchor">#</a></span>        
+    
+</h4>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/posts/first-post/image-6.png"
+        alt="Alt text"
+      />
+      
+      
+    </figure>
+  
+
+
+Best is 95, so we delete the lowest scores and replace them
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        src="/posts/first-post/image-7.png"
+        alt="Alt text"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<div id="the-twist-i-added" class="anchor"></div>
+<h4 class="relative group">The &ldquo;twist&rdquo; I added 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#the-twist-i-added" aria-label="Anchor">#</a></span>        
+    
+</h4>
+<p>With a 10% chance, we mutated something in each of the new networks. <br>Meaning, that for each new network we copy, there is a <em>slight</em> chance of it being a bit different from the original network it was copied from.
+We gave them new (random) input, and again chose the best.</p>
+<p>This process continues until we reach the most satisfying score/state.
+At the end, we simply take the best Neural Network.</p>
+<div id="so-whats-all-that-has-to-do-with-an-ai-that-knows-how-to-play-games" class="anchor"></div>
+<h2 class="relative group">So, what’s all that has to do with an AI that knows how to play games? 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#so-whats-all-that-has-to-do-with-an-ai-that-knows-how-to-play-games" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>Follow part II of this to find out!</p>
 
         </div>
                 
