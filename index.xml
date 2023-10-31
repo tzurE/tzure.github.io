@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 Tzur Eliya</copyright>
-    <lastBuildDate>Sat, 01 Jul 2023 15:05:58 +0200</lastBuildDate><atom:link href="https://tzure.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Jul 2023 16:56:49 +0200</lastBuildDate><atom:link href="https://tzure.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://tzure.github.io/about/</link>
@@ -16,6 +16,16 @@
       <guid>https://tzure.github.io/about/</guid>
       <description>Who am I?</description>
       
+    </item>
+    
+    <item>
+      <title>How I got tickets to a quickly sold out Brandon Sanderson lecture with 40 lines of Python code</title>
+      <link>https://tzure.github.io/posts/tickets_post/</link>
+      <pubDate>Fri, 14 Jul 2023 16:56:49 +0200</pubDate>
+      
+      <guid>https://tzure.github.io/posts/tickets_post/</guid>
+      <description>This was originally published on Medium</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://tzure.github.io/posts/tickets_post/featured.png" />
     </item>
     
     <item>
