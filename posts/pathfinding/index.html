@@ -97,7 +97,7 @@
     "keywords": ["Game Development","programming"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "623"
+    "wordCount": "727"
   }]
   </script>
 
@@ -429,7 +429,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-07-31 20:57:19 &#43;0200 &#43;0200">31 July 2023</time><span class="px-2 text-primary-500">&middot;</span><span>623 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+  <time datetime="2023-07-31 20:57:19 &#43;0200 &#43;0200">31 July 2023</time><span class="px-2 text-primary-500">&middot;</span><span>727 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
   
 
   
@@ -674,38 +674,27 @@
     
 </h3>
 <p>My goal was to design a grid, in which I could position a character on any tile, position another character on a different tile, and then see the pathfinding algorithm in action. from the very first to the very last step.
-Since I only intended to create the grid without any weights, BFS and Dijkstra are the same among the three algorithms I wanted to compare.</p>
-<div id="first-try---no-limitations" class="anchor"></div>
-<h4 class="relative group">First try - No limitations 
+But first - some background</p>
+<div id="background" class="anchor"></div>
+<h3 class="relative group">background 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#first-try---no-limitations" aria-label="Anchor">#</a></span>        
+            style="text-decoration-line: none !important;" href="#background" aria-label="Anchor">#</a></span>        
     
-</h4>
-<p>As a first step, I wanted to compare them on an open grid, without any walls.
-It is noteworthy that although DFS promises to find a path but does not guarantee it will be the shortest, BFS (Dijkstra) guarantees to find the shortest path but does not guarantee the computation time, and A* guarantees to find the shortest path <b>and</b> in the quickest amount of time.
-How quick? incredibly quick.</p>
-<p><video src="1-1.mp4" controls title="First" width="600" height="300"></video></p>
-<div id="why-does-a-performs-so-much-better-then-the-other-two" class="anchor"></div>
-<h4 class="relative group">Why does A* performs so much better then the other two? 
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#why-does-a-performs-so-much-better-then-the-other-two" aria-label="Anchor">#</a></span>        
-    
-</h4>
-<p>First, let&rsquo;s remember how DFS and BFS work</p>
+</h3>
+<p>First, let&rsquo;s remember how DFS, BFS and A* work</p>
 <div id="dfs" class="anchor"></div>
-<h5 class="relative group">DFS 
+<h4 class="relative group">DFS 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#dfs" aria-label="Anchor">#</a></span>        
     
-</h5>
+</h4>
 <p>DFS algorithm starts at the root (top) node of a tree and goes as far as it can down a given branch (path), then backtracks until it finds an unexplored path, and then explores it. The algorithm does this until the entire graph has been explored.</p>
-<p>Simply put, every tile in our grid is a node in the graph. Every node has 8 different other nodes it can explore. that&rsquo;s why dfs does this:
+<p>Simply put, every tile in our grid is a node in the graph. Every node has 8 different other nodes it can explore.
+The character is at the starting node, so DFS acts accordingly
 
 
 
@@ -729,7 +718,7 @@ How quick? incredibly quick.</p>
   
 
 </p>
-<p>and keeps going up:
+<p>it picks a neighbor node and goes deeper:
 
 
 
@@ -753,7 +742,7 @@ How quick? incredibly quick.</p>
   
 
 </p>
-<p>and then keeps going &ldquo;deeper&rdquo; (Hence - depth-first-search) until the target is reached - but the path is <b>very</b> long</p>
+<p>it keeps going deeper (Hence - depth-first-search) until the target is reached - but the path is <b>very</b> long</p>
 <p>
 
 
@@ -778,16 +767,19 @@ How quick? incredibly quick.</p>
 
 </p>
 <div id="bfs-dijkstra-with-weights1" class="anchor"></div>
-<h5 class="relative group">BFS (Dijkstra with weights=1) 
+<h4 class="relative group">BFS (Dijkstra with weights=1) 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#bfs-dijkstra-with-weights1" aria-label="Anchor">#</a></span>        
     
-</h5>
-<p>BFS algorithm starts at the root (top) node and explores the graph layer by layer, examining all the nodes at the same level before descending further. It uses a queue data structure to maintain the order of exploration, ensuring that nodes are visited in a breadth first manner.</p>
-<p>Simple put, now we always visit every neighbor of the node before continuing to the next node.</p>
-<p>This is how BFS does this. The blue nodes are currently inside the queue, waiting to be explored.
+</h4>
+<p>BFS algorithm starts at the root (top) node and explores the graph layer by layer, examining all the nodes at the same level before descending further. It uses a queue data structure to maintain the order of exploration, ensuring that nodes are visited in a breadth first manner.
+<small>here&rsquo;s a useful link on <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm"   target="_blank">
+    Dijkstra</a> if you want to remember why it&rsquo;s the same as BFS when weights=1</small></p>
+<p>Simple put, we always visit every neighbor of the node before continuing to the next node.</p>
+<p>This is how BFS does this.
+The blue nodes are currently inside the queue, waiting to be explored.
 
 
 
@@ -908,15 +900,15 @@ How quick? incredibly quick.</p>
 
 </p>
 <div id="a" class="anchor"></div>
-<h5 class="relative group">A* 
+<h4 class="relative group">A* 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#a" aria-label="Anchor">#</a></span>        
     
-</h5>
-<p>The basic &ldquo;secret&rdquo; here is this - at any step on the grid, A* calculates not only the length so far by simply scanning the grid (similar to BFS), A* adds another step where it calculates the distance <a href="https://en.wikipedia.org/wiki/Taxicab_geometry"   target="_blank">
-    (Manhattan)</a> from the end node, and for most cases - it works amazingly well.
+</h4>
+<p>Similar to BFS, but at any step on the grid, A* calculates not only the length so far by simply scanning the grid (similar to BFS), A* adds another step where it calculates the distance <a href="https://en.wikipedia.org/wiki/Taxicab_geometry"   target="_blank">
+    (Manhattan)</a>
 
 
 
@@ -940,6 +932,28 @@ How quick? incredibly quick.</p>
   
 
 </p>
+<div id="straightforward--comparison---no-limitations" class="anchor"></div>
+<h4 class="relative group">Straightforward  Comparison - No Limitations 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#straightforward--comparison---no-limitations" aria-label="Anchor">#</a></span>        
+    
+</h4>
+<p>As a first comparison, I placed them on an open grid, without any walls.
+It is noteworthy that although DFS promises to find a path but does not guarantee it will be the shortest, BFS (Dijkstra) guarantees to find the shortest path but does not guarantee the computation time, and A* &ldquo;guarantees&rdquo; (heuristic) to find the shortest path <b>and</b> in the quickest amount of time.
+How quick? incredibly quick.
+Here&rsquo;s a video comparison all three. In the left corner you can see which algorithm is currently running.</p>
+<p><video src="1-1.mp4" controls title="First" width="600" height="300"></video></p>
+<div id="why-does-a-performs-so-much-better-then-the-other-two" class="anchor"></div>
+<h4 class="relative group">Why does A* performs so much better then the other two? 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#why-does-a-performs-so-much-better-then-the-other-two" aria-label="Anchor">#</a></span>        
+    
+</h4>
+<p>A* performs much better because of the main difference it has from the other two - it not only calculates the nodes it already knows, it calculates the distance from the final node.<br>This simple heuristic improves the algorithm dramatically in the clean case we just saw, but it can also lead to a worse results in different scenarios.</p>
 <div id="adding-a-maze" class="anchor"></div>
 <h3 class="relative group">Adding A Maze 
     <span
@@ -950,7 +964,8 @@ How quick? incredibly quick.</p>
 </h3>
 <p>Then I started complicating things even more.
 I placed them in a random maze I created, and wanted to see who will win.
-A* won, but mostly because it can &ldquo;give up&rdquo; on certain paths, where BFS never gives up on any path.</p>
+A* won, but mostly because it can &ldquo;give up&rdquo; on certain paths, where BFS never gives up on any path.
+Here&rsquo;s another video comparison of all three. In the left corner you can see which algorithm is currently running.</p>
 <p><video src="2.mp4" controls title="Maze" width="600" height="300"></video></p>
 <div id="where-a-fails" class="anchor"></div>
 <h3 class="relative group">Where A* Fails 
@@ -960,7 +975,7 @@ A* won, but mostly because it can &ldquo;give up&rdquo; on certain paths, where 
             style="text-decoration-line: none !important;" href="#where-a-fails" aria-label="Anchor">#</a></span>        
     
 </h3>
-<p>Although it may appear that I give A* too much credit, there are instances in which it falls short<br> The best example I found was when I placed the end node behind a wall.<br>A* performs miserably since the distance calculation throws it off.</p>
+<p>Although it may appear that I give A* too much credit, there are instances in which it falls short<br> The best example I found was when I placed the end node behind a wall.<br>A* performs miserably since the distance calculation throws it off, and it doesn&rsquo;t &ldquo;give up&rdquo; those very close steps it believes that lead him to the his final destination.</p>
 <p><video src="3.mp4" controls title="Maze" width="600" height="300"></video></p>
 <div id="conclusion" class="anchor"></div>
 <h3 class="relative group">Conclusion 
@@ -971,7 +986,6 @@ A* won, but mostly because it can &ldquo;give up&rdquo; on certain paths, where 
     
 </h3>
 <p>Although it seems like A* is the best choice, there are many cases (not just the one I shared) where BFS and even DFS can perform better. When adding weights, the whole story changes, but more on that in a future post.</p>
-<p>Hope you enjoyed it!</p>
 
         </div>
                 
