@@ -7,17 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 Tzur Eliya</copyright>
-    <lastBuildDate>Fri, 03 Nov 2023 22:16:29 +0200</lastBuildDate><atom:link href="https://tzure.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>The Best Game I Never Released</title>
-      <link>https://tzure.github.io/posts/diagnoseme/</link>
-      <pubDate>Fri, 03 Nov 2023 22:16:29 +0200</pubDate>
-      
-      <guid>https://tzure.github.io/posts/diagnoseme/</guid>
-      <description>First, start by watching the official game trailer here</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://tzure.github.io/posts/diagnoseme/featured.png" />
-    </item>
-    
+    <lastBuildDate>Sun, 20 Aug 2023 22:16:29 +0200</lastBuildDate><atom:link href="https://tzure.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://tzure.github.io/about/</link>
@@ -26,6 +16,16 @@
       <guid>https://tzure.github.io/about/</guid>
       <description>Who am I?</description>
       
+    </item>
+    
+    <item>
+      <title>The Best Game I Never Released</title>
+      <link>https://tzure.github.io/posts/diagnoseme/</link>
+      <pubDate>Sun, 20 Aug 2023 22:16:29 +0200</pubDate>
+      
+      <guid>https://tzure.github.io/posts/diagnoseme/</guid>
+      <description>First, start by watching the official game trailer here</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://tzure.github.io/posts/diagnoseme/featured.png" />
     </item>
     
     <item>
