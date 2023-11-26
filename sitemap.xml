@@ -3,6 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>https://tzure.github.io/privacy_policy_leapventure/</loc>
+    <lastmod>2023-11-26T12:09:16+02:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://tzure.github.io/about/</loc>
     <lastmod>2023-10-28T23:07:33+03:00</lastmod>
     <changefreq>daily</changefreq>
